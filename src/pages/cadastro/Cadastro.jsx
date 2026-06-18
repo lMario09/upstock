@@ -76,8 +76,8 @@ function Cadastro() {
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-(--bg-color) overflow-hidden px-4 py-8 font-sans">
       {/* Elementos Decorativos de Fundo (Glow Effect) */}
-      <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-20%] right-[-10%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full bg-blue-500/10 blur-[80px] sm:blur-[100px] lg:blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full bg-emerald-500/5 blur-[80px] sm:blur-[100px] lg:blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-md bg-(--bg-card-color)/90 backdrop-blur-md border border-(--border-color) rounded-2xl p-8 shadow-2xl z-10 transition-all duration-300">
         {/* Cabeçalho do Card */}

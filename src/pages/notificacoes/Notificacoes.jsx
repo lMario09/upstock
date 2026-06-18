@@ -12,8 +12,8 @@ function Notificacoes() {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-extrabold tracking-tight text-(--text-primary-color)">Notificações</h1>
-          <p className="text-(--text-secondary-color)">
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-(--text-primary-color)">Notificações</h1>
+          <p className="text-sm sm:text-base text-(--text-secondary-color)">
             Acompanhe alertas, avisos e logs do sistema UpStock.
           </p>
         </div>
@@ -33,12 +33,12 @@ function Notificacoes() {
             colorClass = 'text-(--green-color4) bg-emerald-500/5 border-emerald-500/20';
           }
           return (
-            <div key={notif.id} className={`flex items-start gap-4 p-5 rounded-2xl border ${colorClass} shadow-lg transition-all hover:scale-[1.005]`}>
-              <Icon className="shrink-0 mt-0.5" size={20} />
+              <div key={notif.id} className={`flex items-start gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl border ${colorClass} shadow-lg transition-all hover:scale-[1.005]`}>
+                <Icon className="shrink-0 mt-0.5" size={18} />
               <div className="flex flex-col gap-1 w-full sm:flex-row sm:justify-between sm:items-start">
                 <div className="flex flex-col gap-0.5">
-                  <h2 className="font-bold text-(--text-primary-color) text-base">{notif.title}</h2>
-                  <p className="text-sm text-(--text-secondary-color)">{notif.message}</p>
+                  <h2 className="font-bold text-(--text-primary-color) text-sm sm:text-base">{notif.title}</h2>
+                  <p className="text-xs sm:text-sm text-(--text-secondary-color)">{notif.message}</p>
                 </div>
                 <span className="text-xs text-(--text-secondary-color) shrink-0 whitespace-nowrap mt-1 sm:mt-0">{notif.time}</span>
               </div>

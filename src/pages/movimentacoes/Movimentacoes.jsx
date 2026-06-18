@@ -14,14 +14,14 @@ function Movimentacoes() {
     <div className="flex flex-col gap-8 w-full max-w-7xl mx-auto">
       {/* Header */}
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-extrabold tracking-tight text-(--text-primary-color)">Movimentações</h1>
-        <p className="text-(--text-secondary-color)">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-(--text-primary-color)">Movimentações</h1>
+        <p className="text-sm sm:text-base text-(--text-secondary-color)">
           Histórico completo de entradas e saídas do estoque.
         </p>
       </div>
 
       {/* Toolbar */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-4 shadow-lg w-full">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-between items-center bg-(--bg-card-color) border border-(--border-color) rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg w-full">
         <div className="relative w-full sm:w-80">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-secondary-color)" size={18} />
           <input
@@ -43,7 +43,7 @@ function Movimentacoes() {
       </div>
 
       {/* Transactions Table */}
-      <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-6 shadow-lg">
+      <div className="bg-(--bg-card-color) border border-(--border-color) rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>

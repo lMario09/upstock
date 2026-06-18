@@ -16,9 +16,10 @@ function Relatorios() {
             Gere e exporte relatórios detalhados sobre a saúde do seu estoque.
           </p>
         </div>
-        <button className="flex items-center gap-2 border border-(--border-color) hover:bg-(--bg-card-hover-color) text-(--text-primary-color) font-bold py-2.5 px-4 rounded-xl transition-all duration-200">
-          <Download size={18} />
-          Exportar Todos
+        <button className="group flex items-center gap-1.5 sm:gap-2 bg-(--blue-color3) hover:bg-(--blue-color2) active:scale-95 text-white font-bold py-2 sm:py-2.5 px-3 sm:px-5 rounded-xl shadow-lg shadow-blue-500/20 transition-all duration-200 cursor-pointer text-sm sm:text-base">
+          <Download size={16} className="sm:size-[18px] transition-transform duration-200 group-hover:-translate-y-0.5" />
+          <span className="hidden xs:inline">Exportar Todos</span>
+          <span className="xs:hidden">Exportar</span>
         </button>
       </div>
 

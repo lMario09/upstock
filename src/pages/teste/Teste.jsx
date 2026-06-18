@@ -48,14 +48,14 @@ function Teste() {
     <div className="flex flex-col gap-8 w-full max-w-7xl mx-auto">
       {/* Header */}
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-extrabold tracking-tight text-(--text-primary-color)">Visão Geral</h1>
-        <p className="text-(--text-secondary-color)">
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-(--text-primary-color)">Visão Geral</h1>
+        <p className="text-sm sm:text-base text-(--text-secondary-color)">
           Bem-vindo ao painel de gerenciamento do UpStock. Aqui está o resumo das operações de hoje.
         </p>
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, i) => {
           const Icon = stat.icon;
           return (
@@ -73,7 +73,7 @@ function Teste() {
                 </div>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-3xl font-bold text-(--text-primary-color)">{stat.value}</span>
+                <span className="text-2xl sm:text-3xl font-bold text-(--text-primary-color)">{stat.value}</span>
                 <span
                   className={`text-xs font-medium ${
                     stat.isPositive
@@ -96,8 +96,8 @@ function Teste() {
         {/* Recent Movements Table */}
         <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-6 lg:col-span-2 flex flex-col gap-4 shadow-lg">
           <div className="flex justify-between items-center">
-            <h2 className="text-xl font-bold text-(--text-primary-color) flex items-center gap-2">
-              <Activity size={20} className="text-(--blue-color3)" />
+            <h2 className="text-lg sm:text-xl font-bold text-(--text-primary-color) flex items-center gap-2">
+              <Activity size={18} className="sm:size-5 text-(--blue-color3)" />
               Últimas Movimentações
             </h2>
             <button className="text-xs text-(--blue-color3) hover:underline font-semibold">Ver todas</button>
@@ -143,12 +143,12 @@ function Teste() {
         {/* Quick Actions & Stock Alerts */}
         <div className="flex flex-col gap-6">
           <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-6 flex flex-col gap-4 shadow-lg">
-            <h2 className="text-xl font-bold text-(--text-primary-color) flex items-center gap-2">
-              <DollarSign size={20} className="text-(--green-color4)" />
+            <h2 className="text-lg sm:text-xl font-bold text-(--text-primary-color) flex items-center gap-2">
+              <DollarSign size={18} className="sm:size-5 text-(--green-color4)" />
               Valor Total do Estoque
             </h2>
             <div className="flex flex-col gap-1 py-2">
-              <span className="text-4xl font-extrabold text-(--text-primary-color)">R$ 184.250,00</span>
+              <span className="text-2xl sm:text-4xl font-extrabold text-(--text-primary-color)">R$ 184.250,00</span>
               <span className="text-xs text-(--green-color4) flex items-center gap-1 font-medium">
                 Valor estimado dos produtos armazenados
               </span>
@@ -163,7 +163,7 @@ function Teste() {
           </div>
 
           <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-6 flex flex-col gap-4 shadow-lg">
-            <h2 className="text-lg font-bold text-(--text-primary-color) flex items-center gap-2">
+            <h2 className="text-base sm:text-lg font-bold text-(--text-primary-color) flex items-center gap-2">
               <AlertTriangle size={18} className="text-(--yellow-color2)" />
               Ações Recomendadas
             </h2>

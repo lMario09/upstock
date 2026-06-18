@@ -93,10 +93,10 @@ function Usuarios() {
   return (
     <div className="flex flex-col gap-6 max-w-4xl mx-auto">
       {/* Cabeçalho da página */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-extrabold text-(--text-primary-color) tracking-tight flex items-center gap-2">
-            <Users size={24} className="text-(--blue-color3)" />
+          <h1 className="text-xl sm:text-2xl font-extrabold text-(--text-primary-color) tracking-tight flex items-center gap-2">
+            <Users size={20} className="sm:size-6 text-(--blue-color3)" />
             Gerenciamento de Usuários
           </h1>
           <p className="text-sm text-(--text-secondary-color) mt-1">
@@ -114,7 +114,7 @@ function Usuarios() {
       </div>
 
       {/* Cards de resumo */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-4 flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
             <Users size={18} className="text-(--blue-color3)" />
@@ -154,7 +154,7 @@ function Usuarios() {
 
       {/* Formulário de novo usuário */}
       {showForm && (
-        <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-6 shadow-xl">
+        <div className="bg-(--bg-card-color) border border-(--border-color) rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-xl">
           <div className="flex items-center justify-between mb-5">
             <h2 className="text-base font-bold text-(--text-primary-color) flex items-center gap-2">
               <UserPlus size={18} className="text-(--blue-color3)" />
@@ -181,7 +181,7 @@ function Usuarios() {
             </div>
           )}
 
-          <form onSubmit={handleCreateUser} className="grid grid-cols-2 gap-4">
+          <form onSubmit={handleCreateUser} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Nome */}
             <div className="flex flex-col gap-1">
               <label className="text-xs font-bold text-(--text-secondary-color) uppercase tracking-wider">Nome Completo *</label>
@@ -265,8 +265,8 @@ function Usuarios() {
                </div>
              </div>
 
-             {/* Perfil de acesso */}
-             <div className="flex flex-col gap-1 col-span-2">
+              {/* Perfil de acesso */}
+              <div className="flex flex-col gap-1 sm:col-span-2">
                <label className="text-xs font-bold text-(--text-secondary-color) uppercase tracking-wider">Perfil de Acesso</label>
                <div className="flex gap-3">
                  <label className={`flex items-center gap-2.5 flex-1 p-3 rounded-xl border cursor-pointer transition-all ${formData.role === 'user' ? 'border-blue-500/50 bg-blue-500/10' : 'border-(--border-color) bg-(--bg-subtle) hover:bg-(--input-bg)'}`}>
@@ -303,7 +303,7 @@ function Usuarios() {
             </div>
 
             {/* Botões */}
-            <div className="col-span-2 flex gap-3 justify-end pt-2">
+            <div className="sm:col-span-2 flex flex-col-reverse sm:flex-row gap-3 justify-end pt-2">
               <button
                 type="button"
                 onClick={() => { setShowForm(false); setFormError(''); setFormSuccess(''); }}
@@ -330,7 +330,7 @@ function Usuarios() {
       )}
 
       {/* Lista de usuários */}
-      <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl overflow-hidden">
+      <div className="bg-(--bg-card-color) border border-(--border-color) rounded-xl sm:rounded-2xl overflow-hidden">
         <div className="px-6 py-4 border-b border-(--border-color)">
           <h2 className="text-sm font-bold text-(--text-primary-color)">Contas Cadastradas</h2>
         </div>

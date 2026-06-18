@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import { Search, LogOut, Settings, User, ChevronDown, Shield, UserCircle, Sun, Moon } from 'lucide-react';
+import { Search, LogOut, Settings, User, ChevronDown, Shield, UserCircle, Sun, Moon, Menu } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router';
 import { useTheme } from '../../contexts/ThemeContext';
 import { getInitials, getAvatarColor } from '../../utils/avatar';
 
-function TopBar({ onSearch }) {
+function TopBar({ onSearch, onMenuToggle }) {
   const { user, isAdmin, logout } = useAuth();
   const navigate = useNavigate();
   const { resolvedTheme, toggleTheme } = useTheme();
@@ -53,6 +53,15 @@ function TopBar({ onSearch }) {
 
   return (
     <header className="topbar-header">
+      {/* Hamburger — visível apenas no mobile */}
+      <button
+        onClick={onMenuToggle}
+        className="p-2 rounded-xl text-(--text-secondary-color) hover:text-(--text-primary-color) hover:bg-(--bg-card-hover-color) transition-all cursor-pointer md:hidden shrink-0"
+        aria-label="Abrir menu"
+      >
+        <Menu size={20} />
+      </button>
+
       {/* Barra de Busca */}
       <form onSubmit={handleSearchSubmit} className="topbar-search-form">
         <div className="topbar-search-wrapper">

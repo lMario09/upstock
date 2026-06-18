@@ -14,7 +14,7 @@ function Sair() {
   return (
     <div className="flex flex-col gap-6 items-center justify-center min-h-screen max-w-md mx-auto text-center font-sans px-4">
       {/* Elementos Decorativos de Fundo (Glow Effect) */}
-      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-red-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-20%] left-[-10%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full bg-red-500/5 blur-[80px] sm:blur-[100px] lg:blur-[120px] pointer-events-none" />
 
       <div className="bg-(--bg-card-color) border border-(--border-color) rounded-2xl p-8 shadow-2xl flex flex-col items-center gap-6 w-full">
         <div className="p-4 rounded-full bg-rose-500/10 text-(--red-color4)">
